@@ -1,12 +1,14 @@
+import StackList from "@/components/stack-list";
+
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        
-
-        
-      </main>
-     
-    </div>
+    <main className="lg:text-lg">
+      <div className="flex flex-col pt-4">
+        <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl">About</h2>
+        <p className="mb-3 lg:mb-5">I use this project to create my <strong>own notes</strong> about things I learn in Next.js from my experience in other projects, documentation and courses.</p>
+        <p className="mb-3 lg:mb-5">Keeping things summarized help me quickly reviewing important concepts before making important decisions.</p>
+        <StackList />
+      </div >
+    </main >
   );
 }

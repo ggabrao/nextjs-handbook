@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { AppMenu } from "@/components/app-menu";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +36,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="flex flex-col min-h-screen p-6 sm:p-8 sm:max-w-screen-md sm:mx-auto">
+            <header className="flex justify-between shrink-0">
+              <h1 className="text-3xl font-semibold lg:text-4xl">Notes</h1>
+              <ThemeToggle />
+            </header>
+            <div className="mt-2 -translate-x-2">
+              <AppMenu />
+            </div>
+            <div className="flex-grow">
+              {children}
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
