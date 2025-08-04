@@ -21,12 +21,7 @@ export function AppMenu() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className="lg:text-base">
-                        <Link href="/rendering">Rendering</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild className="lg:text-base">
-                        <Link href="/data">Data</Link>
+                        <Link href="/data-fetching">Data Fetching</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
