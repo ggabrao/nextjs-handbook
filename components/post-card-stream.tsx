@@ -14,7 +14,7 @@ export default async function PostCardStream({ id, delay }: { id: number, delay:
     const post = await slowFetch(async () => fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`), delay).then(res => res.json());
 
     return (
-        <Card className="h-32 flex justify-center text-center">
+        <Card className="w-full h-32 flex justify-center text-center">
             <CardHeader>
                 <CardTitle>Card ID: {post.id}</CardTitle>
             </CardHeader>
