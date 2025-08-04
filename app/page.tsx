@@ -1,6 +1,6 @@
 import StackList from "@/components/stack-list";
 
-export default function Home() {
+export default function AboutPage() {
   return (
     <main className="lg:text-lg">
       <div className="flex flex-col pt-4">
