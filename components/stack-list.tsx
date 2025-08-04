@@ -17,7 +17,7 @@ export default function StackList() {
                         <span>👉</span>
                         <span className="hover:underline">Next.js</span>
                     </PopoverTrigger>
-                    <PopoverContent>
+                    <PopoverContent align="start" className="w-80 sm:w-96 lg:w-full">
                         <div className="flex flex-col gap-2 text-sm sm:text-base">
                             <p>👍 Allows developers to build full-stack applications using React</p>
                             <p>👍 Leverages many advanced React features such as React Server Components and Suspense</p>
@@ -32,7 +32,7 @@ export default function StackList() {
                         <span>👉</span>
                         <span className="hover:underline">Shadcn/ui</span>
                     </PopoverTrigger>
-                    <PopoverContent>
+                    <PopoverContent align="start" className="w-80 sm:w-96 lg:w-full">
                         <div className="flex flex-col gap-2 text-sm sm:text-base">
                             <p>👍 Open Source</p>
                             <p>👍 Uses Tailwind CSS</p>
@@ -47,7 +47,7 @@ export default function StackList() {
                         <span>👉</span>
                         <span className="hover:underline">Supabase</span>
                     </PopoverTrigger>
-                    <PopoverContent>
+                    <PopoverContent align="start" className="w-80 sm:w-96 lg:w-full">
                         <div className="flex flex-col gap-2 text-sm sm:text-base">
                             <p>👍 Good free tier plan</p>
                             <p>👍 Easy setup with Next.js and Shadcn</p>

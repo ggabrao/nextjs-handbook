@@ -35,11 +35,13 @@ export default function TipsPage() {
             </pre>
           </li>
         </ol>
-        <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">🚀 Main Next.js optimizations:</h3>
+        <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">📋 Reminders</h3>
         <ul>
-          <li className="list-disc ml-4">Fonts</li>
-          <li className="list-disc ml-4">Images</li>
-          <li className="list-disc ml-4">Links</li>
+          <li className="list-disc ml-4">Optimizations: Fonts, Images and Links</li>
+          <li className="list-disc ml-4">Add 'use client' to <em>specific interactive components</em> instead of making large parts of the UI be client components <span className="font-medium">(it reduces the size of the JS bundles)</span></li>
+          <li className="list-disc ml-4">Use <em>(route)</em> to create route groups, and <em>[route]</em> to create dynamic segments</li>
+          <li className="list-disc ml-4">Check for updates on Partial Prerendering and learn about it when it gets production ready</li>
+
         </ul>
       </div>
     </main>

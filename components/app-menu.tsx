@@ -26,6 +26,11 @@ export function AppMenu() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className="lg:text-base">
+                        <Link href="/mutations">Mutations</Link>
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuLink asChild className="lg:text-base">
                         <Link href="/tips">Tips</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
