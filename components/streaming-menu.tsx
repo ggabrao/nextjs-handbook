@@ -5,9 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-    { name: 'Page level', href: "/streaming/page-level" },
-    { name: 'Compoment level', href: "/streaming/component-level" },
-    { name: 'Section level', href: "/streaming/section-level" },
+    { name: 'Page level', href: "/streaming/page-level#testing" },
+    { name: 'Compoment level', href: "/streaming/component-level#testing" },
+    { name: 'Section level', href: "/streaming/section-level#testing" },
 ];
 
 export default function StreamingMenu() {

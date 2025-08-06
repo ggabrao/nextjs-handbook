@@ -60,7 +60,10 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
                 <AlertDescription className="text-foreground lg:text-base">It may vary depending on the application, but generally it is a good practice to use the Component level strategy.</AlertDescription>
             </Alert>
 
-            <h3 className="text-xl font-semibold mt-8 mb-2">📋 Testing</h3>
+            <h3 id="testing" className="text-xl font-semibold mt-8 mb-1">📋 Testing</h3>
+            <p className="lg:text-lg lg:mb-2">
+                Click on the tabs and check the results below:
+            </p>
             <StreamingMenu />
             <div className="min-h-80">
                 {children}
