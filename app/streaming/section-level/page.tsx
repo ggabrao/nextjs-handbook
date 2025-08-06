@@ -9,7 +9,6 @@ export default async function Page() {
   return (
     <main className="lg:text-lg">
       <div className="flex flex-col pt-4">
-        <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl">Section level streaming</h2>
         <div>
           <Suspense fallback={<SkeletonCard order="1" />}>
             <PostCardStream id={10} delay={3000} />
