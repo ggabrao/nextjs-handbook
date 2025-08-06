@@ -8,7 +8,7 @@ import { Alert, AlertTitle } from "@/components/ui/alert";
 export default function UpdateFormNoRevalidation() {
     return (
         <div className="border rounded shadow p-4 w-full">
-            <h2 className="font-semibold mb-4"> Update Form 2 (no revalidation)</h2>
+            <h2 className="font-semibold mb-4"> Update Form 2</h2>
             <form action={updatePostNoRevalidation} className="flex flex-col gap-4 mb-4">
                 <div>
                     <Label htmlFor="userId" className="mb-2">User ID:</Label>
