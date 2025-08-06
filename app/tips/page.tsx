@@ -10,7 +10,7 @@ export default function TipsPage() {
           <li className="list-disc ml-6"><strong>Mock API: </strong>https://jsonplaceholder.typicode.com</li>
         </ul>
         <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">ℹ Metadata</h3>
-        <p>A common pattern for the title is <em>'App name - Page title'</em>. Implement it with the following steps:</p>
+        <p>A common pattern for the title is <em>&apos;App name - Page title&apos;</em>. Implement it with the following steps:</p>
         <ol className="flex flex-col gap-3 mt-2 mb-10 lg:mt-4 lg:gap-8 lg:mb-16">
           <li>👉 Layout.tsx:
             <pre className="text-sm p-2 bg-primary-foreground">
@@ -38,7 +38,7 @@ export default function TipsPage() {
         <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">📋 Reminders</h3>
         <ul className="flex flex-col gap-3 mb-10 lg:mb-16 lg:gap-5">
           <li className="list-disc ml-4">Optimizations: Fonts, Images and Links</li>
-          <li className="list-disc ml-4">Add 'use client' to <em>specific interactive components</em> instead of making large parts of the UI be client components <span className="font-medium">(it reduces the size of the JS bundles)</span></li>
+          <li className="list-disc ml-4">Add &apos;use client&apos; to <em>specific interactive components</em> instead of making large parts of the UI be client components <span className="font-medium">(it reduces the size of the JS bundles)</span></li>
           <li className="list-disc ml-4">Use <em>(route)</em> to create route groups, and <em>[route]</em> to create dynamic segments</li>
           <li className="list-disc ml-4">Check for updates on Partial Prerendering and learn about it when it gets production ready</li>
         </ul>

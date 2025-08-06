@@ -1,72 +1,79 @@
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import UpdateForm from "@/components/update-form";
+import UpdateFormNoRevalidation from "@/components/update-form-no-revalidation";
+import { InfoIcon } from "lucide-react";
+
 export default function MutationsPage() {
   return (
     <main className="lg:text-lg">
       <div className="flex flex-col pt-4">
         <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl lg:mb-5">Mutations</h2>
+        <p className="mb-4">Advantages of using <strong>Server Actions</strong> for data mutations:</p>
+        <div className="flex flex-col gap-6">
+          <div>
+            <Badge className="bg-green-700 dark:text-foreground lg:text-sm">No API endpoints</Badge>
+            <p className="ml-1 text-sm lg:text-base">Server Actions allow you to run asynchronous code directly on the server, eliminating the need of API entpoints to mutate data.</p>
+          </div>
+          <div>
+            <Badge className="bg-green-700 dark:text-foreground lg:text-sm">Progressive enhancement</Badge>
+            <p className="ml-1 text-sm lg:text-base">Invoking a Server Action within a Server Component allow forms to work even if JavaScript has not yet loaded on the client.</p>
+          </div>
+          <div>
+            <Badge className="bg-green-700 dark:text-foreground lg:text-sm">Caching</Badge>
+            <p className="ml-1 text-sm lg:text-base">Server Actions are deeply integrated with Next.js caching.</p>
+          </div>
+          <div>
+            <Badge className="bg-green-700 dark:text-foreground lg:text-sm">Revalidations</Badge>
+            <p className="ml-1 text-sm lg:text-base">When a form is submitted through a Server Action, you can also revalidate the associated cache using APIs like revalidatePath and revalidateTag.</p>
+          </div>
+        </div>
+      </div>
+      <div className="mt-6 flex flex-col gap-6">
+        <div className="lg:flex lg:gap-12">
+          <div className="lg:w-6/12">
+            <Alert variant="default">
+              <InfoIcon />
+              <AlertTitle>Form 1: cache revalidation on-demand</AlertTitle>
+              <AlertDescription>
+                <p>Update the initial data in any of the fields and submit the form.</p>
+                <Separator />
+                <p>A server action that updates the data and revalidates the path will be invoked.</p>
+                <Separator />
+                <p className="font-medium">Cached data will be purged and UI will be immediately updated with fresh data.</p>
+              </AlertDescription>
+            </Alert>
+          </div>
+          <div className="lg:w-6/12">
+            <UpdateForm />
+          </div>
+        </div>
+        <div className="mt-6 flex flex-col gap-6">
+          <div className="lg:flex lg:gap-12">
+            <div className="lg:w-6/12">
+              <Alert variant="default" className="mb-2">
+                <InfoIcon />
+                <AlertTitle>Form 2: no cache revalidation on-demand</AlertTitle>
+                <AlertDescription>
+                  <p>Update the initial data in any of the fields and submit the form.</p>
+                  <Separator />
+                  <p>A server action that updates the data will be invoked.</p>
+                  <Separator />
+                  <p className="font-medium">UI will not be updated immediatly so data displayed is now stale.</p>
+                  <p className="font-medium">It does not mean that on-demand revalidation is always necessary. In this example, if we navigate away and come back or refresh the page, we would see the updated data.
+                  </p>
+                  <p className="font-medium">
+                    The important thing to take note is that understanding the caching mechanism of Next.js is extremely important to prevent unexpected behaviour.</p>
+                </AlertDescription>
+              </Alert>
+            </div>
+            <div className="lg:w-6/12">
+              <UpdateFormNoRevalidation />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
 }
-
-/*
-MUTATING 0 React Server Actions
-- allow you to run asynchronous code directly on the server.
-- eliminate the need of API entpoints to mutate data.
-- can be invoked from Client or Server Components.
-- The 'action' attribute in the < form > element is used to invoke actions.The action will automatically receive the native FormData object, containing the captured data.
-
-## Benefits:
-- Users can INTERACT with the form and SUBMIT data even if the JavaScript for the form hasn't been loaded yet or if it fails to load.
-  - Deeply integrated with Next.js caching, allowing revaliations
-
-## Steps:
-1. Create the actions in a separate file on / lib(actions.ts)
-2. Invoke the actions from the forms, using the action attribute
-
-## Process inside a server action:
-
-1. Extract the data from the formData object, with methods like:
--get(name)
-  - entries() with Javascript's Object.fromEntries() - on forms that have many fields
-
-2. Ensure Type Validation and Coercion: manually or with a lib(ex: Zod)
-
-3. Insert data into the database and handle errors
-
-4. Revalidate: after updating the data displayed in a route, you need to clear the Next.js client - side router cache and trigger a new request to the server to fetch fresh data.It can be done with revalidatePath()
-    
-5. Redirect
-
-
-VALIDATIONS 0 Server - Side validation(Next.js Recommendation)
-
-# OBS: Achei que a abordagem mostrada no exemplo ficou incompleta:
-* Os campos já preenchidos são zerados quando existem validation errors.
-* As validations só se ativam ao dar submit.
-* Não sei o porquê.Talvez isso só possa ser feito com validação no client side também
-
-# Benefits:
-- Ensure your data is in the expected format BEFORE sending it to your database.
-- Reduce the risk of malicious users bypassing client - side validation
-  - Have one source of truth for what is considered VALID data.
-
-
-    ERRORS 0
-
-# Specific Actions Errors
-Add try/catch inside each of the Server Actions
-
-# Unexpected Errors
-Add an error.tsx file to define a UI boundary for the route segment, allowing to catch UNEXPECTED ERRORS and display a FALLBACK UI
-Test error page: http://localhost:3000/dashboard/invoices/2e94d1ed-d220-449f-9f11-f0bbceed9645000000000000000000/edit
-
-# Not Found
-To display a more specific FALLBACK UI for errors that happen when a resource does not exist,
-  replacing the error.tsx FALLBACK UI that would appear
-
-1. Create the not - found.tsx file
-2. Invoke the function notFound()  
-
-Test 404 page: http://localhost:3000/dashboard/invoices/2e94d1ed-d220-449f-9f11-f0bbceed9645/edit
-
-*/
