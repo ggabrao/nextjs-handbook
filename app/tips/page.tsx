@@ -1,7 +1,7 @@
 export default function TipsPage() {
   return (
-    <main className="lg:text-lg">
-      <div className="flex flex-col pt-4">
+    <main className="lg:text-lg ">
+      <div className="flex flex-col pt-4 lg:pt-12">
         <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl lg:mb-5">Tips</h2>
         <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">⚙️ Project setup</h3>
         <ul className="flex flex-col gap-3 mb-10 lg:mb-16 lg:gap-5">

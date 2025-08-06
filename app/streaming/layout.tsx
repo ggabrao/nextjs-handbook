@@ -5,13 +5,11 @@ import StreamingMenu from "@/components/streaming-menu";
 
 export default function StreamingLayout({ children }: { children: ReactNode }) {
     return (
-        <>
-            <div className="lg:text-lg">
-                <div className="flex flex-col pt-4">
-                    <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl">Streaming</h2>
-                </div>
+        <div>
+            <div className="flex flex-col pt-4 lg:pt-12">
+                <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl">Streaming</h2>
             </div>
-            <p>
+            <p className="lg:text-lg">
                 Streaming is recommended to prevent slow data requests from blocking the whole page, and to allow interaction with the UI without waiting for everything to load.
                 There are three ways of implementing it:
             </p>
@@ -57,9 +55,9 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
             </div>
 
             <Alert variant="default">
-                <ThumbsUpIcon />
-                <AlertTitle>Good Practice</AlertTitle>
-                <AlertDescription>It may vary depending on the application, but generally it is a good practice to use the Component level strategy.</AlertDescription>
+                <ThumbsUpIcon className="lg:scale-125" />
+                <AlertTitle className="lg:text-base">Good Practice</AlertTitle>
+                <AlertDescription className="text-foreground lg:text-base">It may vary depending on the application, but generally it is a good practice to use the Component level strategy.</AlertDescription>
             </Alert>
 
             <h3 className="text-xl font-semibold mt-8 mb-2">📋 Testing</h3>
@@ -67,6 +65,6 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
             <div className="min-h-80">
                 {children}
             </div>
-        </>
+        </div >
     )
 }
