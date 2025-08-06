@@ -41,7 +41,7 @@ export default function RootLayout({
         >
           <div className="flex flex-col min-h-screen p-6 sm:p-8 sm:max-w-screen-md sm:mx-auto 2xl:max-w-screen-xl">
             <header className="flex justify-between shrink-0">
-              <h1 className="text-3xl font-semibold lg:text-4xl">Notes</h1>
+              <h1 className="text-3xl font-semibold lg:text-4xl">📝 Notes</h1>
               <ThemeToggle />
             </header>
             <div className="mt-2 -translate-x-2">
