@@ -11,7 +11,7 @@ export default function MutationsPage() {
       <div className="flex flex-col pt-4">
         <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl lg:mb-5">Mutations</h2>
         <p className="mb-4">Advantages of using <strong>Server Actions</strong> for data mutations:</p>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
           <div>
             <Badge className="bg-green-700 dark:text-foreground lg:text-sm">No API endpoints</Badge>
             <p className="ml-1 text-sm lg:text-base">Server Actions allow you to run asynchronous code directly on the server, eliminating the need of API entpoints to mutate data.</p>
@@ -37,7 +37,7 @@ export default function MutationsPage() {
               <InfoIcon />
               <AlertTitle>Form 1: cache revalidation on-demand</AlertTitle>
               <AlertDescription>
-                <p>Update the initial data in any of the fields and submit the form.</p>
+                <p>Update the initial data and submit the form.</p>
                 <Separator />
                 <p>A server action that updates the data and revalidates the path will be invoked.</p>
                 <Separator />
@@ -56,7 +56,7 @@ export default function MutationsPage() {
                 <InfoIcon />
                 <AlertTitle>Form 2: no cache revalidation on-demand</AlertTitle>
                 <AlertDescription>
-                  <p>Update the initial data in any of the fields and submit the form.</p>
+                  <p>Update the initial data and submit the form.</p>
                   <Separator />
                   <p>A server action that updates the data will be invoked.</p>
                   <Separator />

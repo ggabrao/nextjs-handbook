@@ -1,9 +1,7 @@
 export const fakePost = {
-    title: "Post",
-    description: "Content",
+    userId: 1
 }
 
 export const fakePostNoRevalidation = {
-    title: "Reminder",
-    description: "Text",
+    userId: 2
 }
