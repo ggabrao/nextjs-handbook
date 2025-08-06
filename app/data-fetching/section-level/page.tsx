@@ -1,9 +1,9 @@
-export const dynamic = 'force-dynamic';
-
 import PostCardStream from "@/components/post-card-stream";
 import PostsWrapper from "@/components/posts-wrapper";
 import SkeletonCard from "@/components/skeleton-card";
 import { Suspense } from "react";
+
+export const revalidate = 0;
 
 export default async function Page() {
   return (

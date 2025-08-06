@@ -6,7 +6,6 @@ import { updatePostNoRevalidation } from "@/lib/actions"
 import { fakePostNoRevalidation } from "@/lib/fake-data"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
-
 export default function UpdateFormNoRevalidation() {
     return (
         <div className="border rounded shadow p-4 w-full">

@@ -1,7 +1,7 @@
-export const dynamic = 'force-dynamic';
-
 import PostCard from "@/components/post-card";
 import { slowFetch } from "@/lib/slow-fetch";
+
+export const revalidate = 0;
 
 export default async function Page() {
   const post1 = await slowFetch(async () => fetch('https://jsonplaceholder.typicode.com/posts/1'), 1500).then(res => res.json());

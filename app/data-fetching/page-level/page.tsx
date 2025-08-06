@@ -1,7 +1,7 @@
-export const dynamic = 'force-dynamic';
-
 import PostCard from "@/components/post-card";
 import { slowFetch } from "@/lib/slow-fetch";
+
+export const revalidate = 0;
 
 export default async function Page() {
   const [post1, post2, post3] = await Promise.all([
