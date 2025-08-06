@@ -3,6 +3,12 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { ThumbsUpIcon } from "lucide-react";
 import StreamingMenu from "@/components/streaming-menu";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Streaming',
+};
+
 export default function StreamingLayout({ children }: { children: ReactNode }) {
     return (
         <div>

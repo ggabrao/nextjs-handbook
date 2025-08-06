@@ -3,7 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import UpdateForm from "@/components/update-form";
 import UpdateFormNoRevalidation from "@/components/update-form-no-revalidation";
-import { InfoIcon, MessageCircleWarningIcon, NotebookPenIcon } from "lucide-react";
+import { InfoIcon, NotebookPenIcon } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Mutations',
+};
 
 export default function MutationsPage() {
   return (
