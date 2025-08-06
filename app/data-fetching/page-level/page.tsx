@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import PostCard from "@/components/post-card";
 import { slowFetch } from "@/lib/slow-fetch";
 

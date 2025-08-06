@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import PostCardStream from "@/components/post-card-stream";
 import SkeletonCard from "@/components/skeleton-card";
 import { Suspense } from "react";

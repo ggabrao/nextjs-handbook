@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import PostCardStream from "@/components/post-card-stream";
 import PostsWrapper from "@/components/posts-wrapper";
 import SkeletonCard from "@/components/skeleton-card";
