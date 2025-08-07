@@ -1,4 +1,4 @@
-import { AnimatedContainer } from "@/components/animated-container";
+import { AnimatedContainer } from "@/components/animations/animated-container";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";

@@ -1,4 +1,4 @@
-import { AnimatedContainer } from "@/components/animated-container";
+import { AnimatedContainer } from "@/components/animations/animated-container";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
