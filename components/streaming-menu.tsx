@@ -21,9 +21,9 @@ export default function StreamingMenu() {
                         key={link.name}
                         href={link.href}
                         className={clsx(
-                            'flex h-12 text-primary bg-primary-foreground grow items-center justify-center p-3 text-sm font-medium hover:bg-secondary-foreground hover:text-secondary',
+                            'flex h-12 border grow items-center justify-center p-3 text-sm font-medium hover:text-primary hover:bg-primary-foreground dark:hover:text-primary-foreground dark:hover:bg-primary',
                             {
-                                'text-secondary bg-secondary-foreground': pathname === link.href,
+                                'text-primary bg-primary-foreground dark:text-primary-foreground dark:bg-primary': pathname === link.href,
                             },
                         )}>
                         <p className="">{link.name}</p>
