@@ -1,9 +1,9 @@
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Button } from "./ui/button"
 import { updatePostNoRevalidation } from "@/lib/actions"
 import { fakePostNoRevalidation } from "@/lib/fake-data"
 import { Alert, AlertTitle } from "@/components/ui/alert";
+import { AnimatedButton } from "./animated-button"
 
 export default function UpdateFormNoRevalidation() {
     return (
@@ -21,7 +21,7 @@ export default function UpdateFormNoRevalidation() {
                         defaultValue={fakePostNoRevalidation.userId}
                     />
                 </div>
-                <Button type="submit">Submit</Button>
+                <AnimatedButton />
             </form>
             <Alert>
                 <AlertTitle className="text-center">User ID: {fakePostNoRevalidation.userId}</AlertTitle>

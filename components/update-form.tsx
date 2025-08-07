@@ -1,9 +1,9 @@
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Button } from "./ui/button"
 import { updatePost } from "@/lib/actions"
 import { fakePost } from "@/lib/fake-data"
-import { Alert, AlertTitle } from "@/components/ui/alert";
+import { AnimatedButton } from "./animated-button"
+import { AnimatedAlert } from "./animated-alert"
 
 export default function UpdateForm() {
     return (
@@ -21,11 +21,9 @@ export default function UpdateForm() {
                         defaultValue={fakePost.userId}
                     />
                 </div>
-                <Button type="submit">Submit</Button>
+                <AnimatedButton />
             </form>
-            <Alert>
-                <AlertTitle className="text-center">User ID: {fakePost.userId}</AlertTitle>
-            </Alert>
+            <AnimatedAlert value={fakePost.userId} />
         </div>
     )
 }

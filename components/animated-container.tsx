@@ -16,11 +16,7 @@ const itemVariants = {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-type AnimatedContainerProps = {
-    children: ReactNode[];
-};
-
-export function AnimatedContainer({ children }: AnimatedContainerProps) {
+export function AnimatedContainer({ children }: { children: ReactNode[] }) {
     return (
         <motion.div
             initial="hidden"
