@@ -68,6 +68,8 @@ export default function MutationsPage() {
                     <p className="text-foreground lg:text-base lg:py-1">A server action that updates the data will be invoked.</p>
                     <Separator />
                     <p className="font-medium text-foreground lg:text-base lg:py-1">UI will not be updated immediatly so data displayed is now stale.</p>
+                    <Separator />
+                    <p className="font-medium text-foreground lg:text-base lg:py-1">In this specific example, if we navigate away and come back or refresh the page, we would then see updated data.</p>
                   </AlertDescription>
                 </Alert>
               </div>
@@ -80,10 +82,10 @@ export default function MutationsPage() {
             <NotebookPenIcon />
             <AlertTitle className="lg:text-lg">Important</AlertTitle>
             <AlertDescription>
-              <p className="text-base text-foreground">It does not mean that on-demand revalidation is always necessary. In this example, if we navigate away and come back or refresh the page, we would see the updated data.
+              <p className="text-base text-foreground">It does not mean that on-demand revalidation is always necessary.
+                The important thing to take note is that understanding the caching mechanism of Next.js how to manipulate it is extremely important to prevent unexpected behaviour
+                and bad user experience.
               </p>
-              <p className="text-base text-foreground">
-                The important thing to take note is that understanding the caching mechanism of Next.js is extremely important to prevent unexpected behaviour.</p>
             </AlertDescription>
           </Alert>
         </div >
