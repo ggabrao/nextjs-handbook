@@ -4,7 +4,7 @@ import { ThumbsUpIcon } from "lucide-react";
 import StreamingMenu from "@/components/streaming-menu";
 
 import { Metadata } from "next";
-import { AnimatedContainer } from "@/components/animations/animated-container";
+import { AnimatedContainer } from "@/components/animated-container";
 
 export const metadata: Metadata = {
     title: 'Streaming',
