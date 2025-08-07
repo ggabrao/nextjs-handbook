@@ -18,8 +18,8 @@ export function AnimatedAlert({ value }: { value: number }) {
     }, [value])
 
     return (
-        <Alert>
-            <AlertTitle ref={titleRef} className="text-center transition-all duration-1000">
+        <Alert className="py-8 shadow-sm">
+            <AlertTitle ref={titleRef} className="text-center text-base transition-all duration-1000">
                 User ID: {value}
             </AlertTitle>
         </Alert>

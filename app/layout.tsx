@@ -39,7 +39,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen p-6 sm:p-8 sm:max-w-screen-md sm:mx-auto 2xl:max-w-screen-xl">
+          <div className="flex flex-col min-h-screen p-6 sm:p-8 sm:max-w-screen-md sm:mx-auto 2xl:max-w-screen-lg">
             <header className="flex justify-between shrink-0">
               <h1 className="text-3xl font-semibold lg:text-4xl">📝 Notes</h1>
               <ThemeToggle />

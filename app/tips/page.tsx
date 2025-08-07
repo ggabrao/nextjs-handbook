@@ -43,7 +43,7 @@ export default function TipsPage() {
               </pre>
             </li>
           </ol>
-          <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">📋 Reminders</h3>
+          <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">🗒️ Reminders</h3>
           <ul className="flex flex-col gap-3 mb-10 lg:mb-16 lg:gap-5">
             <li className="list-disc ml-4">Optimizations: Fonts, Images and Links</li>
             <li className="list-disc ml-4">Add &apos;use client&apos; to <em>specific interactive components</em> instead of making large parts of the UI be client components <span className="font-medium">(it reduces the size of the JS bundles)</span></li>
