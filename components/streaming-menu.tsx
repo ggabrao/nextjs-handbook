@@ -11,7 +11,7 @@ const links = [
 ];
 
 export default function StreamingMenu() {
-    const pathname = usePathname();
+    const pathname = usePathname() + '#testing';
 
     return (
         <nav className="flex justify-center items-center text-center">
@@ -21,9 +21,9 @@ export default function StreamingMenu() {
                         key={link.name}
                         href={link.href}
                         className={clsx(
-                            'flex h-12 grow items-center justify-center bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600',
+                            'flex h-12 text-primary bg-primary-foreground grow items-center justify-center p-3 text-sm font-medium hover:bg-secondary-foreground hover:text-secondary',
                             {
-                                'bg-sky-100 text-blue-600': pathname === link.href,
+                                'text-secondary bg-secondary-foreground': pathname === link.href,
                             },
                         )}>
                         <p className="">{link.name}</p>
