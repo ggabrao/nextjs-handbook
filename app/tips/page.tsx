@@ -15,13 +15,13 @@ export default function TipsPage() {
           <ul className="flex flex-col gap-3 mb-10 lg:mb-16 lg:gap-5">
             <li className="list-disc ml-6">Use <strong>npx create-next-app -e with-supabase</strong> to start a new project with Next.js, Shadcn, and Supabase <em>(also including SSR authentication)</em></li>
             <li className="list-disc ml-6">Use the documentation to configure <em>Absolute Imports, Module Path and Typescript specific plugin for Vscode</em></li>
-            <li className="list-disc ml-6"><strong>Mock API: </strong>https://jsonplaceholder.typicode.com</li>
+            <li className="list-disc ml-6">Mock API: https://jsonplaceholder.typicode.com</li>
           </ul>
           <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">ℹ Metadata</h3>
           <p>A common pattern for the title is <em>&apos;Page title | App name&apos;</em>. Implement it with the following steps:</p>
           <ol className="flex flex-col gap-3 mt-2 mb-10 lg:mt-4 lg:gap-8 lg:mb-16">
             <li>👉 Layout.tsx:
-              <pre className="text-sm p-2 bg-primary-foreground">
+              <pre className="text-sm p-2 bg-primary-foreground dark:bg-secondary">
                 <code>
                   {`export const metadata: Metadata = {
   title: {
@@ -34,7 +34,7 @@ export default function TipsPage() {
               </pre>
             </li>
             <li>👉 Page.tsx:
-              <pre className="text-sm p-2 bg-primary-foreground">
+              <pre className="text-sm p-2 bg-primary-foreground dark:bg-secondary">
                 <code>
                   {`export const metadata: Metadata = {
     title: 'Page title',
