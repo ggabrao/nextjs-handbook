@@ -29,11 +29,11 @@ export default function MutationsPage() {
           <div className="flex flex-col gap-6 2xl:grid 2xl:grid-cols-2 2xl:gap-16">
             <div>
               <Badge className="bg-green-700 dark:text-foreground lg:text-base">No API endpoints</Badge>
-              <p className="ml-1 text-sm lg:text-base pt-0.5">Server Actions allow you to run asynchronous code directly on the server, eliminating the need of API entpoints to mutate data.</p>
+              <p className="ml-1 text-sm lg:text-base pt-0.5">Server Actions allow you to run asynchronous code directly on the server, eliminating the need for API endpoints to mutate data.</p>
             </div>
             <div>
               <Badge className="bg-green-700 dark:text-foreground lg:text-base">Progressive enhancement</Badge>
-              <p className="ml-1 text-sm lg:text-base pt-0.5">Invoking a Server Action within a Server Component allow forms to work even if JavaScript has not yet loaded on the client.</p>
+              <p className="ml-1 text-sm lg:text-base pt-0.5">Invoking a Server Action within a Server Component allows forms to work even if JavaScript has not yet loaded on the client.</p>
             </div>
             <div>
               <Badge className="bg-green-700 dark:text-foreground lg:text-base">Caching</Badge>
@@ -87,8 +87,8 @@ export default function MutationsPage() {
                   <CardFooter>
                     <div>
                       <Separator />
-                      <p className="pt-2 font-medium text-destructive lg:text-base">💡 UI will not be updated immediatly so data displayed is now stale.</p>
-                      <p className="pt-5 italic lg:text-base lg:pt-2">In this specific example, if we navigate away and come back or refresh the page, we would then see updated data.</p>
+                      <p className="pt-2 font-medium text-destructive lg:text-base">💡 UI will not be updated immediately, so data displayed is now stale.</p>
+                      <p className="pt-5 italic lg:text-base lg:pt-2">In this specific example, if we navigate away and come back or refresh the page, we would then see the updated data.</p>
                     </div>
                   </CardFooter>
                 </Card>
@@ -106,7 +106,7 @@ export default function MutationsPage() {
               <AlertTitle className="text-base font-medium lg:text-lg">Important</AlertTitle>
               <AlertDescription>
                 <p className="lg:text-base text-foreground">It does not mean that on-demand revalidation is always necessary.
-                  The important thing to take note is that understanding the caching mechanism of Next.js and how to manipulate it is extremely important to prevent unexpected behaviour
+                  The important thing to take note of is that understanding the caching mechanism of Next.js and how to manipulate it is extremely important to prevent unexpected behavior
                   and bad user experience.
                 </p>
               </AlertDescription>
