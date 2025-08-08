@@ -11,7 +11,7 @@ export default function Error({
     return (
         <main className="flex h-full flex-col items-center justify-center py-4">
             <ServerCrashIcon />
-            <span className='text-red-500 font-semibold mt-3'>Error: {error.message}</span>
+            <span className='text-destructive font-semibold mt-3'>Error: {error.message}</span>
         </main>
     );
 }

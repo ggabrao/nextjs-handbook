@@ -5,7 +5,7 @@ export const revalidate = 0;
 
 export default async function Page() {
   const [post1, post2, post3] = await Promise.all([
-    slowFetch(async () => fetch('https://jsonplaceholder.typicode.com/posts/4'), 1500).then(res => res.json()),
+    slowFetch(async () => fetch('https://jsonplaceholder.typicode.com123/posts/4'), 1500).then(res => res.json()),
     fetch('https://jsonplaceholder.typicode.com/posts/5').then(res => res.json()),
     fetch('https://jsonplaceholder.typicode.com/posts/6').then(res => res.json()),
   ]);
