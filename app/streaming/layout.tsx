@@ -21,8 +21,8 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
                     Streaming is recommended to prevent slow data requests from blocking the whole page, and to allow interaction with the UI without waiting for everything to load.
                     There are three ways of implementing it:
                 </p>
-                <div className="mt-8 w-full overflow-y-auto">
-                    <table className="w-full">
+                <div className="mt-6 w-full overflow-y-auto lg:mt-8">
+                    <table className="w-full text-sm lg:text-base">
                         <thead>
                             <tr className="even:bg-muted m-0 border-t p-0">
                                 <th className="border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right">
@@ -64,12 +64,12 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
 
                 <Alert variant="default" className="bg-secondary text-primary mt-9 xl:max-w-lg">
                     <ThumbsUpIcon className="lg:scale-125 " />
-                    <AlertTitle className="text-foreground lg:text-base">Good Practice</AlertTitle>
+                    <AlertTitle className="text-foreground text-base">Good Practice</AlertTitle>
                     <AlertDescription className="text-foreground lg:text-base">It may vary depending on the application, but generally it is a good practice to use the Component level strategy.</AlertDescription>
                 </Alert>
 
-                <h3 id="testing" className="text-xl font-semibold mt-12 mb-1">📋 Testing</h3>
-                <p className="lg:text-lg lg:mb-2">
+                <h3 id="testing" className="font-semibold mt-12 mb-2 lg:mb-1 lg:text-xl">📋 Testing</h3>
+                <p className="mb-4 lg:text-lg lg:mb-2">
                     Click on the tabs and check the results below:
                 </p>
                 <StreamingMenu />

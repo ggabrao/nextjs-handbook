@@ -8,7 +8,7 @@ import { AnimatedButton } from "./animated-button"
 export default function UpdateFormNoRevalidation() {
     return (
         <div className="flex flex-col gap-3">
-            <div className="border rounded-sm shadow-sm lg:rounded-lg p-4 px-8 w-full">
+            <div className="border rounded-lg shadow-sm  p-4 px-8 w-full">
                 <h2 className="font-semibold mb-4 lg:text-xl"> Update Form 2</h2>
                 <form action={updatePostNoRevalidation} className="flex flex-col gap-4 lg:gap-6">
                     <div>
