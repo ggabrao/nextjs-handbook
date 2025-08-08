@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import UpdateForm from "@/components/update-form";
 import UpdateFormNoRevalidation from "@/components/update-form-no-revalidation";
-import { InfoIcon, NotebookPenIcon } from "lucide-react";
+import { NotebookPenIcon } from "lucide-react";
 import { Metadata } from "next";
 import {
   Card,
@@ -25,30 +25,30 @@ export default function MutationsPage() {
       <AnimatedContainer>
         <div className="flex flex-col pt-4 lg:pt-12">
           <h2 className="text-lg text-center font-semibold mb-2 sm:text-left lg:text-2xl">Mutations</h2>
-          <p className="mb-4 lg:mb-8 lg:text-lg">Advantages of using <strong>Server Actions</strong> for data mutations:</p>
-          <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-16">
+          <p className="mb-4 lg:text-lg 2xl:mb-6">Advantages of using <strong>Server Actions</strong> for data mutations:</p>
+          <div className="flex flex-col gap-6 2xl:grid 2xl:grid-cols-2 2xl:gap-16">
             <div>
               <Badge className="bg-green-700 dark:text-foreground lg:text-base">No API endpoints</Badge>
-              <p className="ml-1 text-sm lg:text-lg pt-0.5">Server Actions allow you to run asynchronous code directly on the server, eliminating the need of API entpoints to mutate data.</p>
+              <p className="ml-1 text-sm lg:text-base pt-0.5">Server Actions allow you to run asynchronous code directly on the server, eliminating the need of API entpoints to mutate data.</p>
             </div>
             <div>
               <Badge className="bg-green-700 dark:text-foreground lg:text-base">Progressive enhancement</Badge>
-              <p className="ml-1 text-sm lg:text-lg pt-0.5">Invoking a Server Action within a Server Component allow forms to work even if JavaScript has not yet loaded on the client.</p>
+              <p className="ml-1 text-sm lg:text-base pt-0.5">Invoking a Server Action within a Server Component allow forms to work even if JavaScript has not yet loaded on the client.</p>
             </div>
             <div>
               <Badge className="bg-green-700 dark:text-foreground lg:text-base">Caching</Badge>
-              <p className="ml-1 text-sm lg:text-lg pt-0.5">Server Actions are deeply integrated with Next.js caching.</p>
+              <p className="ml-1 text-sm lg:text-base pt-0.5">Server Actions are deeply integrated with Next.js caching.</p>
             </div>
             <div>
               <Badge className="bg-green-700 dark:text-foreground lg:text-base">Revalidations</Badge>
-              <p className="ml-1 text-sm lg:text-lg pt-0.5">When a form is submitted through a Server Action, you can also revalidate the associated cache using APIs like revalidatePath and revalidateTag.</p>
+              <p className="ml-1 text-sm lg:text-base pt-0.5">When a form is submitted through a Server Action, you can also revalidate the associated cache using APIs like revalidatePath and revalidateTag.</p>
             </div>
           </div>
         </div>
-        <h3 id="testing" className="font-semibold mt-8 lg:mt-20 lg:text-xl">📋 Testing</h3>
+        <h3 id="testing" className="font-semibold mt-8 lg:mt-12 2xl:mt-20 lg:text-xl">📋 Testing</h3>
         <div className="mt-3 flex flex-col gap-6 lg:mt-4">
-          <div className="lg:flex lg:gap-16">
-            <div className="lg:max-w-96">
+          <div className="sm:flex sm:gap-8 2xl:gap-16">
+            <div className="2xl:max-w-96">
               <Card>
                 <CardHeader>
                   <CardTitle className="lg:text-xl">Example 1</CardTitle>
@@ -67,13 +67,13 @@ export default function MutationsPage() {
                 </CardFooter>
               </Card>
             </div>
-            <div className="mt-6 lg:mt-0 lg:min-w-96">
+            <div className="mt-6 sm:min-w-64 sm:mt-0 2xl:min-w-96">
               <UpdateForm />
             </div>
           </div>
-          <div className="mt-6 flex flex-col gap-6 lg:mt-20">
-            <div className="lg:flex lg:gap-16">
-              <div className="lg:max-w-96">
+          <div className="mt-6 flex flex-col gap-6 2xl:mt-20">
+            <div className="sm:flex sm:gap-8 2xl:gap-16">
+              <div className="2xl:max-w-96">
                 <Card>
                   <CardHeader>
                     <CardTitle className="lg:text-xl">Example 2</CardTitle>
@@ -93,7 +93,7 @@ export default function MutationsPage() {
                   </CardFooter>
                 </Card>
               </div>
-              <div className="mt-6 lg:mt-0 lg:min-w-96">
+              <div className="mt-6 sm:min-w-64 sm:mt-0 2xl:min-w-96">
                 <UpdateFormNoRevalidation />
               </div>
             </div>

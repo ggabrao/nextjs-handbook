@@ -62,7 +62,7 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
                     </table>
                 </div>
 
-                <Alert variant="default" className="bg-secondary text-primary mt-9 xl:max-w-lg">
+                <Alert variant="default" className="bg-secondary text-primary mt-9 2xl:max-w-lg">
                     <ThumbsUpIcon className="lg:scale-125 " />
                     <AlertTitle className="text-foreground text-base">Good Practice</AlertTitle>
                     <AlertDescription className="text-foreground lg:text-base">It may vary depending on the application, but generally it is a good practice to use the Component level strategy.</AlertDescription>
