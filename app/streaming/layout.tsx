@@ -21,41 +21,53 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
                     Streaming is recommended to prevent slow data requests from blocking the whole page, and to allow interaction with the UI without waiting for everything to load.
                     There are three ways of implementing it:
                 </p>
-                <div className="mt-6 w-full overflow-y-auto lg:mt-8">
-                    <table className="w-full text-sm lg:text-base">
+                <div className="mt-6 w-full overflow-x-auto lg:mt-8">
+                    <table className="w-full min-w-[600px] text-sm lg:text-base">
                         <thead>
                             <tr className="even:bg-muted m-0 border-t p-0">
-                                <th className="border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right">
+                                <th className="border px-3 py-2 text-left font-bold w-[25%] [&[align=center]]:text-center [&[align=right]]:text-right">
                                     Strategy
                                 </th>
-                                <th className="border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right">
+                                <th className="border px-3 py-2 text-left font-bold w-[30%] [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    Implementation
+                                </th>
+                                <th className="border px-3 py-2 text-left font-bold w-[45%] [&[align=center]]:text-center [&[align=right]]:text-right">
                                     Effect
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr className="even:bg-muted m-0 border-t p-0">
-                                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                                    At the Page level
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    At the Page level <span className="italic">(most basic)</span>
                                 </td>
-                                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                                    The whole page is streamed. The content will be displayed <span className="font-semibold">all at once</span>.
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    Add a <code className="text-xs bg-muted px-1 rounded">loading.tsx</code>
+                                </td>
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    The whole page is streamed. The content will be displayed <span className="font-semibold">all at once</span>, so a slower data fetch in one of the components may lead to a <span className="text-destructive">longer loading time</span>.
                                 </td>
                             </tr>
                             <tr className="even:bg-muted m-0 border-t p-0">
-                                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
                                     At the Component level
                                 </td>
-                                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                                    Each component is streamed individually. That may lead to parts of the UI <span className="font-semibold">popping</span> as each component is ready.
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    Wrap each component in <code className="text-xs bg-muted px-1 rounded">&lt;Suspense&gt;</code> and fetch data in the components
+                                </td>
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    Each component is streamed individually. That may lead to parts of the UI <span className="font-semibold">popping in</span> as each component is ready.
                                 </td>
                             </tr>
                             <tr className="even:bg-muted m-0 border-t p-0">
-                                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
                                     At the Section level
                                 </td>
-                                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                                    Page sections are streamed using wrappers. That may create a <span className="font-semibold">staggered effect</span>.
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    Wrap the section in <code className="text-xs bg-muted px-1 rounded">&lt;Suspense&gt;</code> and fetch data in the section
+                                </td>
+                                <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                                    The section is streamed, so the components inside of it will be displayed at the same time. That may create a more <span className="font-semibold">staggered effect</span> in the UI.
                                 </td>
                             </tr>
                         </tbody>

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
     { name: 'Page level', href: "/streaming/page-level#testing" },
-    { name: 'Compoment level', href: "/streaming/component-level#testing" },
+    { name: 'Component level', href: "/streaming/component-level#testing" },
     { name: 'Section level', href: "/streaming/section-level#testing" },
 ];
 
