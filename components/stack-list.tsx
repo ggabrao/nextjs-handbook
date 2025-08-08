@@ -32,7 +32,7 @@ export default function StackList() {
                         <div className="flex flex-col gap-2 text-sm sm:text-base">
                             <p>🚀 Open Source</p>
                             <p>🚀 Uses Tailwind CSS</p>
-                            <p>🚀 Deeply integrated with Vercel ecossystem</p>
+                            <p>🚀 Deeply integrated with Vercel ecosystem</p>
                         </div>
                     </PopoverContent>
                 </Popover>
@@ -45,8 +45,9 @@ export default function StackList() {
                     </PopoverTrigger>
                     <PopoverContent align="start" className="w-80 sm:w-96 lg:w-full">
                         <div className="flex flex-col gap-2 text-sm sm:text-base">
-                            <p>🚀 Good free tier plan</p>
+                            <p>🚀 Good free tier plan for starter projects</p>
                             <p>🚀 Easy setup with Next.js and Shadcn</p>
+                            <p>🚀 Provides authentication, database, and real-time features out of the box</p>
                         </div>
                     </PopoverContent>
                 </Popover>
