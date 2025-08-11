@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   title: 'Mutations',
 };
 
+export const revalidate = 0;
+
 export default function MutationsPage() {
   return (
     <main className="lg:text-lg">
