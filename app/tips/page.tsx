@@ -17,7 +17,7 @@ export default function TipsPage() {
             <li className="list-disc ml-6">Use the documentation to configure <em>Absolute Imports, Module Path and TypeScript specific plugin for VS Code</em></li>
             <li className="list-disc ml-6">Mock API: https://jsonplaceholder.typicode.com</li>
           </ul>
-          <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">ℹ Metadata</h3>
+          <h3 className="font-semibold mb-1.5 lg:text-lg lg:mb-3">ℹ️ Metadata</h3>
           <p className="text-sm lg:text-lg">A common pattern for the title is <em>&apos;Page title | App name&apos;</em>. Implement it with the following steps:</p>
           <ol className="flex flex-col gap-8 mb-10 mt-4 lg:mb-16">
             <li>👉 Layout.tsx:
