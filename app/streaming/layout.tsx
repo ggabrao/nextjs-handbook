@@ -80,9 +80,9 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
                     <AlertDescription className="text-foreground lg:text-base">It may vary depending on the application, but generally it is a good practice to use the Component level strategy.</AlertDescription>
                 </Alert>
 
-                <h3 id="testing" className="font-semibold mt-12 mb-2 lg:mb-1 lg:text-xl">📋 Testing</h3>
+                <h3 id="testing" className="font-semibold mt-12 mb-2 lg:mb-1 lg:text-xl">📋 Examples</h3>
                 <p className="mb-4 lg:text-lg lg:mb-2">
-                    Click on the tabs and check the results below:
+                    Click on the tabs below to see the different streaming effects in action:
                 </p>
                 <StreamingMenu />
             </AnimatedContainer>
