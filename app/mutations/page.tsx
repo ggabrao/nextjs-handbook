@@ -45,24 +45,30 @@ export default function MutationsPage() {
             </div>
           </div>
         </div>
-        <h3 id="testing" className="font-semibold mt-8 lg:mt-12 2xl:mt-20 lg:text-xl">📋 Testing</h3>
+        <h3 id="testing" className="font-semibold mt-8 lg:mt-12 2xl:mt-20 lg:text-xl">📋 Examples</h3>
+        <p className="mt-2 lg:text-lg">
+          The examples below help us understand situations where not revalidating the cache on-demand would lead to undesired effects.
+          Imagine that a user wants to remain on the same page after updating a form. We would expect that the new data would immediately be displayed
+          after submitting the form. That is what happens in example 1, but not in example 2.
+        </p>
         <div className="mt-3 flex flex-col gap-6 lg:mt-4">
           <div className="sm:flex sm:gap-8 2xl:gap-16">
             <div className="2xl:max-w-96">
               <Card>
                 <CardHeader>
-                  <CardTitle className="lg:text-xl">Example 1</CardTitle>
+                  <CardTitle className="lg:text-xl">Example 1 <span className="ml-2">✅</span></CardTitle>
                   <CardDescription className="text-base lg:text-lg">With cache revalidation on-demand</CardDescription>
                   <Separator />
                 </CardHeader>
                 <CardContent>
-                  <p className="lg:text-base">Update the initial data and submit.</p>
-                  <p className="lg:text-base mt-3">A server action that updates the data and revalidates the path will be invoked.</p>
+                  <p className="lg:text-base">Please update the value and submit.</p>
+                  <p className="lg:text-base mt-3">Behind the scenes, a server action that updates the data and revalidates the path will be invoked.</p>
+                  <p className="lg:text-base mt-3">Cached data will be purged and the UI is updated with fresh data.</p>
                 </CardContent>
                 <CardFooter>
                   <div>
                     <Separator />
-                    <p className="pt-2 font-medium lg:text-base">💡 Cached data will be purged and UI will be immediately updated with fresh data.</p>
+                    <p className="pt-2 font-medium lg:text-base">💡 Notice that the value you submitted is immediately displayed in the card below the form, as expected.</p>
                   </div>
                 </CardFooter>
               </Card>
@@ -71,24 +77,25 @@ export default function MutationsPage() {
               <UpdateForm />
             </div>
           </div>
+
           <div className="mt-6 flex flex-col gap-6 2xl:mt-20">
             <div className="sm:flex sm:gap-8 2xl:gap-16">
               <div className="2xl:max-w-96">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="lg:text-xl">Example 2</CardTitle>
+                    <CardTitle className="lg:text-xl">Example 2 <span className="ml-2">❌</span></CardTitle>
                     <CardDescription className="text-base lg:text-lg">No cache revalidation on-demand</CardDescription>
                     <Separator />
                   </CardHeader>
                   <CardContent>
-                    <p className="lg:text-base">Update the initial data and submit.</p>
-                    <p className="lg:text-base mt-3">A server action that updates the data will be invoked.</p>
+                    <p className="lg:text-base">Please update the value and submit.</p>
+                    <p className="lg:text-base mt-3">Behind the scenes, a server action that only updates the data will be invoked.</p>
+                    <p className="lg:text-base mt-3 text-destructive">Since no revalidation was triggered, the old cached data will keep showing in the UI.</p>
                   </CardContent>
                   <CardFooter>
                     <div>
                       <Separator />
-                      <p className="pt-2 font-medium text-destructive lg:text-base">💡 UI will not be updated immediately, so data displayed is now stale.</p>
-                      <p className="pt-5 italic lg:text-base lg:pt-2">In this specific example, if we navigate away and come back or refresh the page, we would then see the updated data.</p>
+                      <p className="pt-2 font-medium lg:text-base">💡 Notice that if we refresh the page, or even press the submit button on the form 1 (which revalidates the whole path), we would then see the updated data.</p>
                     </div>
                   </CardFooter>
                 </Card>
@@ -105,7 +112,7 @@ export default function MutationsPage() {
             <div>
               <AlertTitle className="text-base font-medium lg:text-lg">Important</AlertTitle>
               <AlertDescription>
-                <p className="lg:text-base text-foreground">It does not mean that on-demand revalidation is always necessary.
+                <p className="lg:text-base text-foreground">This is just a simple example and what happens with the cache in Next.js is usually complex.
                   The important thing to take note of is that understanding the caching mechanism of Next.js and how to manipulate it is extremely important to prevent unexpected behavior
                   and bad user experience.
                 </p>
