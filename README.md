@@ -4,7 +4,7 @@ Project to assist beginners in **Next.js** by sharing my personal knowledge and 
 
 Includes theory and visual examples on topics that can be hard to understand at a glance, like *streaming* and *server actions*.
 
-Main features:
+**Main features:**
 - Summarized notes and boards
 - Practical examples
 - Tips
