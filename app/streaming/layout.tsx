@@ -56,7 +56,7 @@ export default function StreamingLayout({ children }: { children: ReactNode }) {
                                     Wrap each component in <code className="text-xs bg-muted px-1 rounded">&lt;Suspense&gt;</code> and fetch data in the components
                                 </td>
                                 <td className="border px-3 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                                    Each component is streamed individually. That may lead to parts of the UI <span className="font-semibold">popping in</span> as each component is ready.
+                                    Each component is streamed individually. That may lead to parts of the UI <span className="font-semibold">popping in</span> as each component gets ready.
                                 </td>
                             </tr>
                             <tr className="even:bg-muted m-0 border-t p-0">
