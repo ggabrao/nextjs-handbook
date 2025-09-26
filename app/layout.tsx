@@ -41,7 +41,7 @@ export default function RootLayout({
         >
           <div className="flex flex-col min-h-screen p-6 sm:p-8 sm:max-w-screen-md sm:mx-auto 2xl:max-w-screen-lg">
             <header className="flex justify-between shrink-0">
-              <h1 className="text-2xl font-semibold lg:text-4xl">📝 Next.js Handbook</h1>
+              <h1 className="text-2xl font-semibold lg:text-4xl">Next.js Handbook</h1>
               <ThemeToggle />
             </header>
             <div className="mt-2 -translate-x-2">
