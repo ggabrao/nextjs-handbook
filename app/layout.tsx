@@ -47,6 +47,7 @@ export default function RootLayout({
             <div className="mt-2 -translate-x-2">
               <AppMenu />
             </div>
+            <span className="text-destructive text-sm lg:text-base italic font-semibold">Note: Built with Next.js 15 - I'll be exploring the new Next.js 16 changes soon.</span>
             <div className="flex-grow">
               {children}
             </div>
